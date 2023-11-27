@@ -1,46 +1,187 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creating a Stunning Personal Profile Card with HTML and CSS</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div class="card">
-  <div class="left-container">
-    <img src="head.png" alt="Profile Image">
-    <h2 class="gradienttext">Devin Chen</h2>
-    <p>Student, Network Engineer</p>
-  </div>
-  <div class="right-container">
-    <h3 class="gradienttext">Profile Details</h3>
-    <table>
-        <tr>
-            <td>Name :</td>
-            <td>Devin Chen</td>
-          </tr>
-      <tr>
-        <td>School :</td>
-        <td>Whatcom Community College</td>
-      </tr>
-      <tr>
-        <td>Mobile :</td>
-        <td>+1 778 805 6788</td>
-      </tr>
-      <tr>
-        <td>Email :</td>
-        <td>Dchen5804#student.whatcom.edu</td>
-      </tr>
-      <tr>
-        <td>Address :</td>
-        <td>204 Olivine Ln, Bellingham, WA</td>
-      </tr>
-    </table>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV template</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Montserrat font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+  </head>
+  <body>   
+    <section>
+      <!-- MOBILE NAVIGATION -->
+      <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large">
+        <a href="#home" class="w3-bar-item w3-button w3-hover-none">CURRICULUM VITAE</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNavigation()">&#9776;</a>
+      </div>
+      <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky">
+        <a href="#about" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">ABOUT</a>
+        <a href="#resume" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">RESUME</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-center w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">CONTACT</a>
+      </div>
 
-</div>
+      <!-- SOCIAL SECTION -->
+      <section class="image-section w3-quarter w3-fixed w3-padding-small">
+        <!--IMAGE/AVATAR-->
+        <img src="avatar.png" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;"/>
+        <!--SCIAL NETWORK BUTTONS-->
+        <div class="links w3-margin-top w3-padding-small">
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#facebook" target="_blank">
+              <i data-feather="facebook"></i>
+          </a>
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#instagram" target="_blank">
+             <i data-feather="instagram"></i>
+          </a>
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#twitter" target="_blank">
+             <i data-feather="twitter"></i>
+          </a>
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#linkedin" target="_blank">
+             <i data-feather="linkedin"></i>
+          </a>
+        </div>
+        <!--CV DOWNLOAD BUTTON-->
+        <div class="w3-container w3-padding-16">
+          <a href="./resume.pdf" class="w3-amber w3-hover-amber w3-button w3-round-small w3-hover-deep-orange w3-padding-large" target="_blank" download="resume.pdf">
+            <i data-feather="arrow-down" style="vertical-align: -0.35em;"></i>
+            <span class="w3-margin-left download-text">DOWNLOAD CV</span>
+          </a>
+        </div>
+      </section>
 
-</body>
+      <!--CV CONTENT SECTION-->
+      <section class="w3-threequarter w3-padding-large w3-right">
+        <!--DESKTOP NAVIGATION-->
+        <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small">
+          <a href="#home" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green">CURRICULUM VITAE</a>
+          <a href="#contact" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">CONTACT</a>
+          <a href="#resume" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">RESUME</a>
+          <a href="#about" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">ABOUT</a>
+        </div>
+        <div class="content-container w3-margin-top-2">
+          <!--HOME SECTION-->
+          <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
+            <p style="font-style: italic; font-size:x-large;">"The mind is the limit. When you face your struggles, you overcome them."</p>
+            <h1>Devin Chen</h2>
+            <h2>College Student</h3>
+            <p></p>
+          </div>
+
+          <!--ABOUT SECTION-->
+          <div id="about" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">ABOUT</h2>
+            <p class="w3-margin-top-2"> 
+              I have over 20 years of experience working in Information Technology.
+              Currently, I pursue my AAS in Whatcom Community College to 
+              improve my Cybersecurity skills.
+            </p>
+            <p class=""> 
+              Previously, I was a network engineer, where I led a team of IT staff 
+              to successfully provide reliable internet services to more than 400 
+              business customers for decade.
+            </p>
+            <p class=""> 
+              Competencies: network protocols, Cisco OS, Microsoft servers, 
+              Linux, cybersecurity.
+            </p>
+          </div>
+
+          <!--RESUME-->
+          <div id="resume" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">RESUME</h2>
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+
+              <!--EMPLOYMENT HISTORY SECTION-->
+              <h3 class="w3-border-amber">MY EMPLOYMENT HISTORY</h3>
+              <div class="">
+                <h4>Remote IT Systems Administrator at Acrontech Inc., US</h4>
+                <p> March 2021 - December 2022</p>
+                <ul class="w3-ul" style="font-weight: 500;">
+                  <li>Manage Software Defined Infrastructure and Virtualization Platform for Enterprise-level data center computing and storage</li>
+                  <li>Monitor and maintain network and server performance, security and troubleshooting</li>
+                  <li>Deploy, operate, manage, backup and disaster recovery of applications regarding IPFS Enterprise-level data center computing and storage provider</li>
+                </ul>
+              </div>
+              <div class="">
+                <h4>Senior Network Manager at Beijing Xinlianyutong Network Technology Service Co., Ltd., China</h4>
+                <p>January 2007 - September 2014 </p>
+                <ul class="w3-ul" style="font-weight: 500;">
+                  <li>Planned, designed, and implemented the backbone network infrastructure for the ISP</li>
+                  <li>Developed and maintained standard configurations, procedures, and guidelines to provide internet services for each separate business customer</li>
+                  <li>Monitored performance and ensured system availability and reliability</li>
+                </ul>
+              </div>
+              <div class="">
+                <h4>System Administrator/ Network Engineer at Information Technology Service Centre of Peking University Science Park (PUSP), China</h4>
+                <p>January 2001 - December 2006 </p>
+                <ul class="w3-ul" style="font-weight: 500;">
+                  <li>Evaluated and installed computer hardware, network software, operating system software and software applications for 50+ company staff</li>
+                  <li>Maintained, performed troubleshooting, and administered various servers, workstations, and mobile devices</li>
+                  <li>Managed various IT and business applications to optimize employee collaboration and operations efficiency</li>
+                </ul>
+              </div>
+            </div>
+
+            <!---EDUCATION SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-amber">MY EDUCATION</h3>
+                <h4>AAS of Computer Information Systems, Whatcom Community College, Bellingham, WA (In Progress)</h4>
+                <p>September 2022 - June 2024 </p>
+            </div>
+
+            <!--SKILLS SECTION-->
+            <div class="w3-container w3-margin-top-2 w3-cursive">
+              <h3 class="w3-border-amber">MY SKILLS</h3>
+              <!--TECHNICAL SKILLS-->
+              <ul class="w3-ul" style="font-weight: 500;">
+                <li>Strong knowledge with networking features and protocols such as spanning tree, ARP, VLAN, OSPF, BGP, VTP, Ether channel, 802.1Q trunking, SNMP, MPLS </li>
+                <li>Windows Desktop, Windows Server (install, configure, DNS, IIS, Exchange), Windows Domains, and Active Directory users, groups, and policies, SQL and MS Office </li>
+                <li>Knowledge of Virtualization: VMware, Parallels, Hyper-V, Virtual Box </li>
+              </ul>
+            </div>
+
+          <!--CONTACT SECTION-->
+          <div id="contact" class="w3-container w3-margin-top-20-percent w3-cursive">
+            <h2 class="w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY CONTACT DETAILS</h3>
+            <div class="w3-margin-top-2" style="font-weight: 500;">
+              <p>Name: Devin Chen </p>
+              <p>Adress: 204 Olivine Ln, Bellingham, WA</p>
+              <p>Phone number: +16507770999</p>
+              <p>E-mail: Devnchen0086@gmail.com</p>
+            </div>
+          </div>
+
+        <!--FOOTER-->
+        <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+        <footer class="w3-container w3-border-top w3-center w3-margin-top-4">
+          <p>© 2023 - Devin Chen </p>
+           <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+          <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> 
+        <!-- End footer -->
+        </footer>
+
+        <!--END OF CV SECTION-->
+      </section>      
+    </section>
+    <script>
+      // Function to toggle mobile navigation
+      function toggleNavigation() {
+        let nav = document.getElementById("mobile-nav");
+        if (nav.classList.contains('w3-show')) {
+          nav.classList.remove('w3-show');
+        } else { 
+          nav.classList.add('w3-show');
+        }
+      }
+    </script>
+    <script>
+      // Script to load feather icons
+      feather.replace()
+    </script>
+  </body>
 </html>
